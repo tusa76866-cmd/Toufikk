@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ExamML">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#040910">
+<title>ExamML — Sétif-1</title>
+<script>
+// ── INLINE PWA SETUP ──
+(function(){
+  // Create manifest blob
+  const ICON192 = "data:image/png;base64,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";
+  const ICON512 = "data:image/png;base64,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";
+  
+  const manifest = {
+    name: "Exam ML Engine — Sétif-1",
+    short_name: "ExamML",
+    description: "ML Prediction Engine for PhD Medical Physics Exam",
+    start_url: "./",
+    display: "standalone",
+    orientation: "portrait",
+    background_color: "#040910",
+    theme_color: "#00d4ff",
+    icons: [
+      { src: ICON192, sizes: "192x192", type: "image/png", purpose: "any maskable" },
+      { src: ICON512, sizes: "512x512", type: "image/png", purpose: "any maskable" }
+    ]
+  };
+  
+  const mBlob = new Blob([JSON.stringify(manifest)], {type:'application/manifest+json'});
+  const mUrl = URL.createObjectURL(mBlob);
+  const link = document.createElement('link');
+  link.rel = 'manifest'; link.href = mUrl;
+  document.currentScript.after(link);
+  
+  // Apple touch icon
+  const aLink = document.createElement('link');
+  aLink.rel = 'apple-touch-icon'; aLink.href = ICON192;
+  document.currentScript.after(aLink);
+  
+  // Inline Service Worker
+  const swCode = `
+const CACHE='examml-v2';
+self.addEventListener('install',e=>{self.skipWaiting();});
+self.addEventListener('activate',e=>{self.clients.claim();});
+self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)));});
+  `;
+  const swBlob = new Blob([swCode], {type:'text/javascript'});
+  const swUrl = URL.createObjectURL(swBlob);
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register(swUrl, {scope:'./'}).catch(()=>{});
+  }
+})();
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg: #040910;
+  --bg2: #070d1a;
+  --bg3: #0a1220;
+  --border: #0d1829;
+  --border2: #1a2540;
+  --c: #e0e8ff;
+  --c2: #8090b0;
+  --c3: #4a6080;
+  --c4: #2a3a55;
+  --cyan: #00d4ff;
+  --orange: #ff6b35;
+  --green: #a8ff3e;
+  --purple: #9b59b6;
+  --yellow: #e67e22;
+  --pink: #ff6b9d;
+  --blue: #4a90d9;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; overflow: hidden; background: var(--bg); }
+
+body {
+  font-family: 'Space Mono', monospace;
+  color: var(--c);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+/* ── SPLASH ── */
+#splash {
+  position: fixed; inset: 0; background: var(--bg); z-index: 1000;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 20px;
+  transition: opacity 0.5s;
+}
+#splash.fade { opacity: 0; pointer-events: none; }
+
+.splash-icon {
+  width: 100px; height: 100px;
+  border: 2px solid var(--cyan);
+  border-radius: 24px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,212,255,0.3), inset 0 0 20px rgba(0,212,255,0.05);
+  animation: pulse-icon 2s ease-in-out infinite;
+}
+@keyframes pulse-icon { 0%,100%{box-shadow:0 0 30px rgba(0,212,255,0.3)} 50%{box-shadow:0 0 60px rgba(0,212,255,0.5)} }
+.splash-hex { font-size: 36px; }
+.splash-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--cyan); letter-spacing: 2px; }
+.splash-sub { font-size: 9px; letter-spacing: 4px; color: var(--c3); }
+.splash-bar { width: 160px; height: 2px; background: var(--border2); border-radius: 1px; overflow: hidden; }
+.splash-fill { height: 100%; background: linear-gradient(90deg,var(--cyan),var(--green)); width: 0; animation: fill-bar 1.5s ease forwards 0.3s; }
+@keyframes fill-bar { to { width: 100%; } }
+
+/* ── TOPBAR ── */
+#topbar {
+  background: linear-gradient(180deg, #060d1aee, #070d1a);
+  border-bottom: 1px solid var(--border);
+  padding: calc(var(--safe-top) + 12px) 16px 10px;
+  flex-shrink: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.topbar-row { display: flex; align-items: center; gap: 10px; }
+.app-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: var(--cyan); letter-spacing: 1px; }
+.app-badge { font-size: 7px; color: var(--c4); letter-spacing: 2px; margin-left: auto; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1}50%{opacity:0.4} }
+
+/* ── SCROLL AREA ── */
+#scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 12px 14px calc(var(--safe-bottom) + 70px);
+}
+#scroll-area::-webkit-scrollbar { display: none; }
+
+/* ── BOTTOM NAV ── */
+#bottomnav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #060d1aee;
+  border-top: 1px solid var(--border);
+  padding: 6px 4px calc(var(--safe-bottom) + 6px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 50;
+}
+.nav-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 6px 2px; border: none; background: transparent; cursor: pointer;
+  border-radius: 10px; transition: all 0.2s; color: var(--c3);
+  font-family: 'Space Mono', monospace;
+}
+.nav-btn.active { color: var(--cyan); background: rgba(0,212,255,0.08); }
+.nav-btn.active .nav-icon { filter: drop-shadow(0 0 4px var(--cyan)); }
+.nav-icon { font-size: 18px; line-height: 1; }
+.nav-label { font-size: 7px; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ── CARDS ── */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  transition: all 0.15s;
+}
+.card.tap { cursor: pointer; }
+.card.tap:active { transform: scale(0.98); background: var(--bg3); }
+.card.sel { background: var(--bg3); border-color: var(--cyan); }
+
+/* ── LABELS ── */
+.slabel {
+  font-size: 8px; letter-spacing: 3px; color: var(--c4);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+
+/* ── SCORE RING ── */
+.score-ring { position: relative; width: 52px; height: 52px; flex-shrink: 0; }
+.score-ring svg { transform: rotate(-90deg); }
+.score-num {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800;
+}
+
+/* ── BADGE ── */
+.rank-badge {
+  width: 24px; height: 24px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 700; flex-shrink: 0;
+}
+
+/* ── TAG ── */
+.tag {
+  display: inline-block; padding: 1px 6px; border-radius: 3px;
+  font-size: 7px; letter-spacing: 1px; margin-right: 3px; margin-top: 2px;
+}
+
+/* ── SIGNAL ROW ── */
+.srow { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.slbl { font-size: 8px; width: 90px; flex-shrink: 0; overflow: hidden; white-space: nowrap; }
+input[type=range] { flex: 1; cursor: pointer; accent-color: var(--cyan); height: 3px; }
+.sval { font-size: 9px; width: 30px; text-align: right; flex-shrink: 0; }
+
+/* ── INPUTS ── */
+.ifield {
+  background: #050b16; border: 1px solid var(--border2);
+  color: var(--c); padding: 10px 12px; border-radius: 8px;
+  font-size: 12px; width: 100%; font-family: 'Space Mono', monospace;
+  outline: none; margin-bottom: 8px;
+  transition: border-color 0.2s;
+}
+.ifield:focus { border-color: var(--cyan); }
+select.ifield { appearance: none; }
+textarea.ifield { resize: none; height: 70px; }
+
+.btn {
+  padding: 11px; border-radius: 8px; font-size: 9px; letter-spacing: 2px;
+  cursor: pointer; font-family: 'Space Mono', monospace; text-transform: uppercase;
+  width: 100%; border: none; transition: all 0.2s;
+}
+.btn:active { transform: scale(0.97); }
+.btn-g { background: rgba(168,255,62,0.12); border: 1px solid var(--green); color: var(--green); }
+.btn-c { background: rgba(0,212,255,0.12); border: 1px solid var(--cyan); color: var(--cyan); }
+.btn-r { background: rgba(255,68,68,0.08); border: 1px solid #ff444433; color: #ff6666; }
+.btn-x { background: transparent; border: 1px solid var(--border2); color: var(--c3); }
+
+/* ── FAB ── */
+.fab {
+  position: fixed; right: 16px; bottom: calc(var(--safe-bottom) + 72px);
+  width: 48px; height: 48px; border-radius: 14px;
+  background: linear-gradient(135deg,var(--cyan),#0090cc);
+  border: none; cursor: pointer; color: #040910;
+  font-size: 22px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,212,255,0.4);
+  z-index: 40; transition: all 0.2s;
+}
+.fab:active { transform: scale(0.92); }
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(4,9,16,0.85);
+  z-index: 200; display: flex; align-items: flex-end;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.modal {
+  background: #08111e;
+  border: 1px solid var(--border2);
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-height: 88dvh;
+  overflow-y: auto;
+  padding: 20px 16px calc(var(--safe-bottom) + 16px);
+  animation: slide-up 0.3s cubic-bezier(.16,1,.3,1);
+}
+@keyframes slide-up { from{transform:translateY(100%)} to{transform:translateY(0)} }
+.modal-handle { width: 36px; height: 4px; background: var(--border2); border-radius: 2px; margin: 0 auto 16px; }
+.modal-title { font-family:'Syne',sans-serif; font-size:16px; font-weight:700; color:var(--c); margin-bottom:14px; }
+
+/* ── SECTION HEADER ── */
+.sec-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 12px;
+}
+
+/* ── TIMELINE ── */
+.tl { position: relative; padding-left: 22px; }
+.tl::before { content:''; position:absolute; left:8px; top:0; bottom:0; width:1px; background:var(--border2); }
+.tl-item { position: relative; margin-bottom: 12px; }
+.tl-dot { position:absolute; left:-17px; top:6px; width:10px; height:10px; border-radius:50%; border:2px solid var(--bg2); }
+
+/* ── PROGRESS BAR ── */
+.pbar { height:4px; background:var(--border); border-radius:2px; overflow:hidden; margin-top:5px; }
+.pbar-fill { height:100%; border-radius:2px; transition:width 0.6s cubic-bezier(.16,1,.3,1); }
+
+/* ── FEAT BAR ── */
+.fbar { height:5px; background:var(--border); border-radius:3px; overflow:hidden; flex:1; }
+.fbar-fill { height:100%; border-radius:3px; }
+
+/* ── COLOR DOTS ── */
+.cdot {
+  width: 22px; height: 22px; border-radius: 50%; cursor: pointer;
+  transition: transform 0.15s; flex-shrink: 0;
+  border: 2px solid transparent;
+}
+.cdot.sel { border-color: white; transform: scale(1.2); }
+
+/* ── GRID ── */
+.g2 { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.g3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; }
+
+/* ── PILLS ── */
+.pill-row { display:flex; gap:5px; flex-wrap:wrap; margin-bottom:12px; }
+.pill {
+  padding: 5px 10px; border-radius: 6px; font-size: 8px; letter-spacing: 1px;
+  cursor: pointer; border: 1px solid var(--border2); color: var(--c3);
+  background: transparent; font-family: 'Space Mono', monospace;
+  text-transform: uppercase; transition: all 0.15s; white-space: nowrap;
+}
+.pill.on { background: rgba(0,212,255,0.1); border-color: var(--cyan); color: var(--cyan); }
+.pill.on-g { background: rgba(168,255,62,0.1); border-color: var(--green); color: var(--green); }
+
+/* ── STAT BOX ── */
+.stat-box {
+  background: var(--bg3); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; text-align: center;
+}
+.stat-val { font-family:'Syne',sans-serif; font-size:20px; font-weight:800; }
+.stat-lbl { font-size:7px; color:var(--c3); letter-spacing:2px; margin-top:2px; }
+
+/* ── DIVIDER ── */
+.div { height:1px; background:var(--border); margin: 10px 0; }
+
+/* ── EMPTY STATE ── */
+.empty { text-align:center; padding:32px 0; color:var(--c4); font-size:10px; letter-spacing:2px; }
+.empty-icon { font-size:32px; margin-bottom:10px; }
+
+/* ── TOAST ── */
+#toast {
+  position:fixed; bottom:calc(var(--safe-bottom)+80px); left:50%; transform:translateX(-50%) translateY(20px);
+  background:#0a1428; border:1px solid var(--cyan); color:var(--cyan);
+  padding:8px 16px; border-radius:20px; font-size:10px; letter-spacing:2px;
+  z-index:500; opacity:0; transition:all 0.3s; white-space:nowrap;
+  pointer-events:none;
+}
+#toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* ── ANIMATIONS ── */
+@keyframes fade-in { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.fade-in { animation: fade-in 0.3s ease forwards; }
+</style>
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="splash-icon"><span class="splash-hex">⬡</span></div>
+  <div class="splash-title">ExamML</div>
+  <div class="splash-sub">SÉTIF-1 · PHYSIQUE MÉDICALE</div>
+  <div class="splash-bar"><div class="splash-fill"></div></div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <div class="topbar-row">
+    <span style="font-size:18px">⬡</span>
+    <span class="app-title">EXAMML</span>
+    <span class="status-dot"></span>
+    <span class="app-badge" id="hstats">—</span>
+  </div>
+</div>
+
+<!-- SCROLL AREA -->
+<div id="scroll-area">
+  <div id="tab-predict" class="fade-in"></div>
+  <div id="tab-exams"   class="hidden fade-in"></div>
+  <div id="tab-topics"  class="hidden fade-in"></div>
+  <div id="tab-signals" class="hidden fade-in"></div>
+  <div id="tab-model"   class="hidden fade-in"></div>
+</div>
+
+<!-- FAB -->
+<button class="fab hidden" id="fab" onclick="openFab()">＋</button>
+
+<!-- BOTTOM NAV -->
+<div id="bottomnav">
+  <button class="nav-btn active" onclick="switchTab('predict',this)" data-tab="predict">
+    <span class="nav-icon">⬡</span>
+    <span class="nav-label">Predict</span>
+  </button>
+  <button class="nav-btn" onclick="switchTab('exams',this)" data-tab="exams">
+    <span class="nav-icon">📋</span>
+    <span class="nav-label">Exams</span>
+  </button>
+  <button class="nav-btn" onclick="switchTab('topics',this)" data-tab="topics">
+    <span class="nav-icon">⊞</span>
+    <span class="nav-label">Topics</span>
+  </button>
+  <button class="nav-btn" onclick="switchTab('signals',this)" data-tab="signals">
+    <span class="nav-icon">⊙</span>
+    <span class="nav-label">Signals</span>
+  </button>
+  <button class="nav-btn" onclick="switchTab('model',this)" data-tab="model">
+    <span class="nav-icon">⚙</span>
+    <span class="nav-label">Model</span>
+  </button>
+</div>
+
+<!-- MODAL CONTAINER -->
+<div id="modal-root"></div>
+
+<script>
+// ══════════════════════════════════════════
+// SERVICE WORKER
+// ══════════════════════════════════════════
+// SW registered inline above
+
+// ══════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════
+let currentTab = 'predict';
+let selectedTopic = null;
+let filterPartie = 0;
+let targetYear = 2026;
+let examFilter = '';
+let expandedExam = null;
+let selectedColor = '#00d4ff';
+
+const COLORS = ['#00d4ff','#ff6b35','#a8ff3e','#9b59b6','#e67e22','#ff6b9d','#4a90d9'];
+const PC = {1:'#00d4ff',2:'#ff6b35',3:'#a8ff3e'};
+const PL = {1:'Imagerie',2:'Traitement/RT',3:'Dosimétrie'};
+const STORAGE_KEY = 'examml_data_v3';
+
+// ── DEFAULT DATA ──
+const defaultData = {
+  signals: [
+    {id:'S_HIST',label:'Historical Repetition',weight:0.15,color:'#4a90d9',desc:'Appeared in past exams'},
+    {id:'S_PUB', label:'Recent Publication',   weight:0.20,color:'#9b59b6',desc:'Published 2022–2025'},
+    {id:'S_CONF',label:'Conference Link',       weight:0.25,color:'#00d4ff',desc:'ICSRI/ASRO/JEPM'},
+    {id:'S_CLIN',label:'Clinical Use CLCC',     weight:0.20,color:'#e67e22',desc:'Used at CLCC Sétif'},
+    {id:'S_NEW', label:'Never Tested Before',   weight:0.12,color:'#a8ff3e',desc:'Absent from all exams'},
+    {id:'S_INT', label:'Intl Collaboration',    weight:0.08,color:'#ff6b9d',desc:'Intl research link'},
+  ],
+  examDB: [
+    {id:'e2019',year:2019,color:'#9b59b6',label:'Concours Doctorat 2019-2020',
+     conference:'JEPM Sétif 2018',responsible:'Pr. Chaoui + Pr. Kharfi',
+     notes:'Imagerie: filtrage, Laplacien. RT/Radiobio: EQD2, TCP, NTCP, calcul UM.'},
+    {id:'e2021',year:2021,color:'#e67e22',label:'Concours Doctorat 2020-2021',
+     conference:'JEPM Sétif 2020',responsible:'Pr. Kharfi + Pr. Chaoui',
+     notes:'CT: HU, fenêtrage. Traitement: histogramme, filtre médian, contours. Dosimétrie: calcul UM.'},
+    {id:'e2025',year:2025,color:'#00d4ff',label:'Concours Doctorat 2024-2025',
+     conference:'ICSRI Sétif oct-2025',responsible:'Pr. Azizi + Dr. Khalal + Dr. Ghediri',
+     notes:'Ultrasound+Doppler · MRI gradients · Adaptive RT · AI segmentation · TRS-398'},
+  ],
+  topics: [
+    {id:'t1', label:'Ultrasound + Doppler',         partie:1,color:'#00d4ff',prof:'Ounoughi',      year:2025,exam:'e2025',
+     signals:{S_HIST:0.0,S_PUB:0.7,S_CONF:1.0,S_CLIN:0.8,S_NEW:1.0,S_INT:0.6}},
+    {id:'t2', label:'MRI Gradients + k-space',      partie:1,color:'#00d4ff',prof:'Khalal/Azizi',  year:2025,exam:'e2025',
+     signals:{S_HIST:0.0,S_PUB:1.0,S_CONF:1.0,S_CLIN:1.0,S_NEW:1.0,S_INT:0.7}},
+    {id:'t3', label:'AI Segmentation — U-Net',      partie:2,color:'#ff6b35',prof:'Azizi',         year:2025,exam:'e2025',
+     signals:{S_HIST:0.0,S_PUB:1.0,S_CONF:1.0,S_CLIN:0.7,S_NEW:1.0,S_INT:0.8}},
+    {id:'t4', label:'Adaptive RT Workflow',         partie:2,color:'#ff6b35',prof:'Mahgoun',       year:2025,exam:'e2025',
+     signals:{S_HIST:0.0,S_PUB:1.0,S_CONF:1.0,S_CLIN:1.0,S_NEW:1.0,S_INT:0.5}},
+    {id:'t5', label:'IRM vs CT — Radiotherapy',    partie:2,color:'#ff6b35',prof:'Azizi',         year:2025,exam:'e2025',
+     signals:{S_HIST:0.3,S_PUB:1.0,S_CONF:1.0,S_CLIN:1.0,S_NEW:0.8,S_INT:0.7}},
+    {id:'t6', label:'Matrix + Histogram + Filter',  partie:2,color:'#ff6b35',prof:'Khalal',        year:2025,exam:'e2025',
+     signals:{S_HIST:1.0,S_PUB:0.8,S_CONF:1.0,S_CLIN:0.5,S_NEW:0.0,S_INT:0.3}},
+    {id:'t7', label:'TRS-398 Ionisation Chamber',  partie:3,color:'#a8ff3e',prof:'Ghediri/Betka', year:2025,exam:'e2025',
+     signals:{S_HIST:0.5,S_PUB:1.0,S_CONF:1.0,S_CLIN:1.0,S_NEW:0.8,S_INT:0.6}},
+    {id:'t8', label:'3D Printing Bolus + PDD',     partie:3,color:'#a8ff3e',prof:'Kharfi',        year:2025,exam:'',
+     signals:{S_HIST:0.3,S_PUB:1.0,S_CONF:1.0,S_CLIN:1.0,S_NEW:0.8,S_INT:0.4}},
+    {id:'t9', label:'EQD2 + TCP/NTCP',             partie:2,color:'#9b59b6',prof:'2019 exam',     year:2019,exam:'e2019',
+     signals:{S_HIST:1.0,S_PUB:0.6,S_CONF:0.5,S_CLIN:0.8,S_NEW:0.0,S_INT:0.2}},
+    {id:'t10',label:'Small Fields + Monte Carlo',  partie:3,color:'#a8ff3e',prof:'Chaoui',        year:2025,exam:'',
+     signals:{S_HIST:0.5,S_PUB:1.0,S_CONF:0.6,S_CLIN:1.0,S_NEW:0.5,S_INT:1.0}},
+    {id:'t11',label:'Hounsfield Units CT',          partie:1,color:'#e67e22',prof:'Kharfi',        year:2021,exam:'e2021',
+     signals:{S_HIST:0.5,S_PUB:0.9,S_CONF:0.7,S_CLIN:0.9,S_NEW:0.3,S_INT:0.3}},
+    {id:'t12',label:'Hadronthérapie + Bragg Peak',  partie:2,color:'#ff6b35',prof:'Ounoughi',      year:2024,exam:'',
+     signals:{S_HIST:0.0,S_PUB:1.0,S_CONF:0.8,S_CLIN:0.3,S_NEW:1.0,S_INT:0.9}},
+    {id:'t13',label:'Filtre Laplacien',             partie:2,color:'#9b59b6',prof:'2019 exam',     year:2019,exam:'e2019',
+     signals:{S_HIST:1.0,S_PUB:0.4,S_CONF:0.4,S_CLIN:0.3,S_NEW:0.0,S_INT:0.1}},
+    {id:'t14',label:'Fenêtrage CT (window/level)',  partie:1,color:'#e67e22',prof:'Kharfi',        year:2021,exam:'e2021',
+     signals:{S_HIST:0.6,S_PUB:0.8,S_CONF:0.6,S_CLIN:0.9,S_NEW:0.2,S_INT:0.2}},
+    {id:'t15',label:'Calcul UM — SAD technique',    partie:3,color:'#e67e22',prof:'Chaoui',        year:2021,exam:'e2021',
+     signals:{S_HIST:1.0,S_PUB:0.9,S_CONF:0.8,S_CLIN:1.0,S_NEW:0.0,S_INT:0.3}},
+    {id:'t16',label:'Égalisation histogramme',      partie:2,color:'#e67e22',prof:'2021 exam',     year:2021,exam:'e2021',
+     signals:{S_HIST:0.7,S_PUB:0.5,S_CONF:0.5,S_CLIN:0.4,S_NEW:0.1,S_INT:0.1}},
+    {id:'t17',label:'PET-CT — Médecine nucléaire',  partie:1,color:'#ff6b9d',prof:'ASRO 2026',     year:2026,exam:'',
+     signals:{S_HIST:0.0,S_PUB:0.7,S_CONF:0.8,S_CLIN:0.6,S_NEW:1.0,S_INT:0.6}},
+    {id:'t18',label:'CBCT correction HU',           partie:1,color:'#00d4ff',prof:'Keidar',        year:2025,exam:'',
+     signals:{S_HIST:0.3,S_PUB:1.0,S_CONF:0.7,S_CLIN:1.0,S_NEW:0.5,S_INT:0.4}},
+  ]
+};
+
+// ══════════════════════════════════════════
+// PERSISTENCE
+// ══════════════════════════════════════════
+function saveData() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify({signals,examDB,topics})); } catch(e){}
+}
+function loadData() {
+  try {
+    const d = localStorage.getItem(STORAGE_KEY);
+    if(d) { const p=JSON.parse(d); signals=p.signals; examDB=p.examDB; topics=p.topics; return; }
+  } catch(e){}
+  signals=[...defaultData.signals];
+  examDB=[...defaultData.examDB];
+  topics=JSON.parse(JSON.stringify(defaultData.topics));
+}
+
+let signals, examDB, topics;
+loadData();
+
+// ══════════════════════════════════════════
+// ML ENGINE
+// ══════════════════════════════════════════
+function mlRaw(t) { return signals.reduce((a,s)=>a+(t.signals[s.id]||0)*s.weight,0); }
+function nbScore(t) {
+  const raw=mlRaw(t);
+  const all=topics.map(x=>mlRaw(x));
+  const mean=all.reduce((a,v)=>a+v,0)/all.length;
+  const std=Math.sqrt(all.reduce((a,v)=>a+Math.pow(v-mean,2),0)/all.length)||0.01;
+  const z=(raw-mean)/std;
+  return Math.min(99,Math.max(1,Math.round((raw+z*0.03)*100)));
+}
+function feats(t) {
+  return signals.map(s=>({...s,contrib:Math.round((t.signals[s.id]||0)*s.weight*100),raw:t.signals[s.id]||0}))
+    .sort((a,b)=>b.contrib-a.contrib);
+}
+function getSorted() {
+  return [...topics].map(t=>({...t,score:nbScore(t),feats:feats(t)})).sort((a,b)=>b.score-a.score);
+}
+function getFiltered() {
+  const s=getSorted();
+  return filterPartie===0?s:s.filter(t=>t.partie===filterPartie);
+}
+function scoreColor(s){return s>80?'#a8ff3e':s>60?'#00d4ff':s>40?'#ff6b35':'#4a6080';}
+function totalW(){return signals.reduce((a,s)=>a+s.weight,0);}
+
+// ══════════════════════════════════════════
+// SCORE RING SVG
+// ══════════════════════════════════════════
+function scoreRing(score, color) {
+  const r=22, c=26, circ=2*Math.PI*r;
+  const dash=circ*(score/100);
+  return `<div class="score-ring">
+    <svg width="52" height="52" viewBox="0 0 52 52">
+      <circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="#0d1829" stroke-width="3"/>
+      <circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="${color}" stroke-width="3"
+        stroke-dasharray="${dash} ${circ}" stroke-linecap="round"/>
+    </svg>
+    <div class="score-num" style="color:${color}">${score}</div>
+  </div>`;
+}
+
+// ══════════════════════════════════════════
+// RENDER PREDICT
+// ══════════════════════════════════════════
+function renderPredict() {
+  const f=getFiltered(), s=getSorted();
+  let html=`
+    <div class="card" style="margin-bottom:12px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <span class="slabel" style="margin:0">TARGET YEAR</span>
+        <div style="display:flex;gap:5px;flex-wrap:wrap;margin-left:auto">
+          ${[2026,2027,2028].map(y=>`<button class="pill ${targetYear===y?'on-g':''}" onclick="setYear(${y})">${y}</button>`).join('')}
+        </div>
+      </div>
+      <div class="g3" style="margin-bottom:2px">
+        ${[1,2,3].map(p=>{
+          const best=s.filter(t=>t.partie===p)[0];
+          return `<div class="stat-box">
+            <div class="stat-val" style="color:${PC[p]}">${best?best.score:'—'}</div>
+            <div class="stat-lbl" style="color:${PC[p]}">P${p}</div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
+
+    <div class="slabel">ML PREDICTION RANKING</div>
+    <div class="pill-row">
+      <button class="pill ${filterPartie===0?'on':''}" onclick="setPartie(0)">ALL</button>
+      ${[1,2,3].map(p=>`<button class="pill ${filterPartie===p?'on':''}" onclick="setPartie(${p})" style="${filterPartie===p?`color:${PC[p]};border-color:${PC[p]};background:${PC[p]}18`:''}">${PL[p]}</button>`).join('')}
+    </div>`;
+
+  f.forEach((t,i)=>{
+    const rank=s.findIndex(x=>x.id===t.id);
+    const sc=t.score, bc=scoreColor(sc);
+    const isSel=selectedTopic===t.id;
+    const examInfo=examDB.find(e=>e.id===t.exam);
+    const isMedal=rank<3;
+
+    let detail='';
+    if(isSel){
+      let fh='';
+      t.feats.forEach(f=>{
+        fh+=`<div class="srow">
+          <span class="slbl" style="color:${f.color}">${f.label.slice(0,12)}</span>
+          <div class="fbar"><div class="fbar-fill" style="width:${Math.min(100,f.contrib*4)}%;background:${f.color}"></div></div>
+          <span class="sval" style="color:${f.color}">+${f.contrib}</span>
+        </div>`;
+      });
+      let sh='';
+      signals.forEach(s=>{
+        const v=t.signals[s.id]||0;
+        sh+=`<div class="srow">
+          <span class="slbl" style="color:${s.color}">${s.label.slice(0,12)}</span>
+          <input type="range" min="0" max="1" step="0.05" value="${v}" style="accent-color:${s.color}"
+            oninput="liveUpdateSignal('${t.id}','${s.id}',this.value)">
+          <span class="sval" style="color:${s.color}" id="sv_${t.id}_${s.id}">${Math.round(v*100)}%</span>
+        </div>`;
+      });
+      detail=`<div style="margin-top:12px;padding-top:12px;border-top:1px solid #0d1829">
+        <div class="slabel">FEATURE IMPORTANCE</div>${fh}
+        <div class="slabel" style="margin-top:10px">ADJUST LIVE</div>${sh}
+        <button class="btn btn-r" style="margin-top:10px" onclick="removeTopic('${t.id}');event.stopPropagation()">✕ REMOVE</button>
+      </div>`;
+    }
+
+    html+=`<div class="card tap ${isSel?'sel':''}" onclick="toggleTopic('${t.id}')" style="border-color:${isSel?t.color:'#0d1829'}">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="rank-badge" style="background:${isMedal?t.color:'#0d1829'};color:${isMedal?'#040910':'#2a3a55'}">${rank+1}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:${isSel?t.color:' #c0cce0'};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t.label}</div>
+          <div style="margin-top:4px">
+            <span class="tag" style="background:${PC[t.partie]}18;color:${PC[t.partie]}">P${t.partie}</span>
+            <span class="tag" style="background:#1a2540;color:#4a6080">${t.prof}</span>
+            ${examInfo?`<span class="tag" style="background:${examInfo.color}18;color:${examInfo.color}">${examInfo.year}</span>`:''}
+          </div>
+        </div>
+        ${scoreRing(sc,bc)}
+      </div>${detail}
+    </div>`;
+  });
+
+  // Predicted structure
+  html+=`<div class="card" style="margin-top:4px;border-color:#1a2540">
+    <div class="slabel">PREDICTED STRUCTURE ${targetYear}</div>
+    ${[1,2,3].map(p=>{
+      const best=s.filter(t=>t.partie===p)[0];
+      return best?`<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #0a1420">
+        <span style="font-size:8px;color:${PC[p]};letter-spacing:2px;width:50px;flex-shrink:0">PARTIE ${p}</span>
+        <span style="font-size:11px;color:#8090b0;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${best.label}</span>
+        <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:800;color:${PC[p]}">${best.score}%</span>
+      </div>`:'';
+    }).join('')}
+  </div>`;
+
+  document.getElementById('tab-predict').innerHTML = html;
+}
+
+function liveUpdateSignal(tid, sid, val) {
+  const t=topics.find(t=>t.id===tid);
+  if(t){t.signals[sid]=parseFloat(val);saveData();}
+  const el=document.getElementById(`sv_${tid}_${sid}`);
+  if(el)el.textContent=Math.round(val*100)+'%';
+  renderPredict();
+}
+
+// ══════════════════════════════════════════
+// RENDER EXAMS
+// ══════════════════════════════════════════
+function renderExams() {
+  const sorted=[...examDB].sort((a,b)=>a.year-b.year);
+  let html=`<div class="slabel">EXAM TIMELINE (${examDB.length})</div>
+    <div class="tl">`;
+
+  sorted.forEach(e=>{
+    const linked=topics.filter(t=>t.exam===e.id);
+    const isExp=expandedExam===e.id;
+    let detail='';
+    if(isExp){
+      const avgSc=linked.length?Math.round(linked.reduce((a,t)=>a+nbScore(t),0)/linked.length):0;
+      let topicsHtml=linked.length?linked.map(t=>{
+        const sc=nbScore(t);
+        return `<div style="display:flex;align-items:center;gap:8px;padding:7px 8px;background:#050a14;border-radius:8px;margin-bottom:5px">
+          <div style="width:5px;height:5px;border-radius:50%;background:${t.color};flex-shrink:0"></div>
+          <span style="font-size:11px;color:#8090b0;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${t.label}</span>
+          <span style="font-size:9px;color:${PC[t.partie]}">P${t.partie}</span>
+          <span style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:${t.color}">${sc}%</span>
+        </div>`;
+      }).join('') : `<div class="empty"><div class="empty-icon">○</div>No topics linked</div>`;
+
+      const parties=[...new Set(linked.map(t=>t.partie))].sort();
+      detail=`<div style="margin-top:12px;padding-top:12px;border-top:1px solid ${e.color}22">
+        <div class="g3" style="margin-bottom:12px">
+          <div class="stat-box"><div class="stat-val" style="color:${e.color}">${linked.length}</div><div class="stat-lbl">topics</div></div>
+          <div class="stat-box"><div class="stat-val" style="color:${e.color}">${avgSc}%</div><div class="stat-lbl">avg score</div></div>
+          <div class="stat-box"><div class="stat-val" style="color:${e.color}">${parties.map(p=>'P'+p).join(',')}</div><div class="stat-lbl">parties</div></div>
+        </div>
+        <div class="slabel">NOTES</div>
+        <div style="font-size:11px;color:#6080a0;line-height:1.7;margin-bottom:12px;background:#050a14;padding:10px;border-radius:8px">${e.notes||'—'}</div>
+        <div style="font-size:9px;color:#4a6080;margin-bottom:8px">📎 ${e.conference}</div>
+        <div style="font-size:9px;color:#4a6080;margin-bottom:12px">👤 ${e.responsible}</div>
+        <div class="slabel">LINKED TOPICS</div>
+        ${topicsHtml}
+        <button class="btn btn-r" style="margin-top:10px" onclick="removeExam('${e.id}');event.stopPropagation()">✕ REMOVE EXAM</button>
+      </div>`;
+    }
+
+    html+=`<div class="tl-item">
+      <div class="tl-dot" style="background:${e.color}"></div>
+      <div class="card tap ${isExp?'sel':''}" onclick="toggleExam('${e.id}')" style="border-color:${isExp?e.color:'#0d1829'}">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:${e.color};line-height:1">${e.year}</div>
+            <div style="font-size:8px;color:#4a6080;margin-top:2px">${topics.filter(t=>t.exam===e.id).length} topics linked</div>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:11px;color:#c0cce0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${e.label}</div>
+            <div style="font-size:9px;color:#4a6080;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📎 ${e.conference}</div>
+          </div>
+          <span style="color:#2a3a55;font-size:14px">${isExp?'▲':'▼'}</span>
+        </div>${detail}
+      </div>
+    </div>`;
+  });
+  html+=`</div>`;
+  document.getElementById('tab-exams').innerHTML = html;
+}
+
+// ══════════════════════════════════════════
+// RENDER TOPICS
+// ══════════════════════════════════════════
+function renderTopics() {
+  const examTabs=[
+    {id:'',label:'ALL'},
+    ...examDB.sort((a,b)=>a.year-b.year).map(e=>({id:e.id,label:''+e.year,color:e.color})),
+    {id:'none',label:'UNLINKED'}
+  ];
+  let filtered=examFilter===''?topics:examFilter==='none'?topics.filter(t=>!t.exam):topics.filter(t=>t.exam===examFilter);
+  
+  let html=`<div class="slabel">TOPIC DATABASE (${topics.length})</div>
+    <div class="pill-row">
+      ${examTabs.map(e=>`<button class="pill ${examFilter===e.id?'on':''}" onclick="setExamFilter('${e.id}')" 
+        style="${examFilter===e.id&&e.color?`color:${e.color};border-color:${e.color};background:${e.color}18`:''}">${e.label}</button>`).join('')}
+    </div>
+    <div style="color:#4a6080;font-size:9px;margin-bottom:10px;letter-spacing:1px">${filtered.length} topics shown</div>`;
+
+  if(filtered.length===0){
+    html+=`<div class="empty"><div class="empty-icon">⊞</div>No topics — tap + to add</div>`;
+  } else {
+    const fs=filtered.map(t=>({...t,score:nbScore(t)})).sort((a,b)=>b.score-a.score);
+    fs.forEach(t=>{
+      const examInfo=examDB.find(e=>e.id===t.exam);
+      const bc=scoreColor(t.score);
+      html+=`<div class="card" style="border-color:${t.color}22">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:6px;min-height:6px;border-radius:3px;background:${t.color};flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:12px;color:#c0cce0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t.label}</div>
+            <div style="margin-top:4px">
+              <span class="tag" style="background:${PC[t.partie]}18;color:${PC[t.partie]}">P${t.partie}</span>
+              <span class="tag" style="background:#1a2540;color:#4a6080">${t.prof}</span>
+              ${examInfo?`<span class="tag" style="background:${examInfo.color}18;color:${examInfo.color}">${examInfo.year}</span>`:''}
+            </div>
+            <div class="pbar"><div class="pbar-fill" style="width:${t.score}%;background:${bc}"></div></div>
+          </div>
+          <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:${bc};flex-shrink:0">${t.score}%</span>
+          <button onclick="removeTopic('${t.id}')" style="background:transparent;border:none;color:#ff4444;cursor:pointer;font-size:16px;padding:4px;flex-shrink:0">✕</button>
+        </div>
+      </div>`;
+    });
+  }
+  document.getElementById('tab-topics').innerHTML = html;
+}
+
+// ══════════════════════════════════════════
+// RENDER SIGNALS
+// ══════════════════════════════════════════
+function renderSignals() {
+  const tw=totalW(), ok=Math.abs(tw-1)<0.02;
+  let html=`
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+      <div class="slabel" style="margin:0">SIGNAL WEIGHTS</div>
+      <span style="font-size:9px;color:${ok?'#a8ff3e':'#ff6b35'};margin-left:auto">Σ=${tw.toFixed(2)} ${ok?'✓':'⚠ ≠1.0'}</span>
+    </div>
+    <div style="background:#050a14;border-radius:10px;padding:10px;margin-bottom:12px">
+      ${signals.map(s=>`<div class="srow">
+        <span class="slbl" style="color:${s.color}">${s.label.slice(0,11)}</span>
+        <input type="range" min="0.01" max="0.5" step="0.01" value="${s.weight}" style="accent-color:${s.color}"
+          oninput="updateSigWeight('${s.id}',this.value,this)">
+        <span class="sval" style="color:${s.color}" id="sw_${s.id}">${Math.round(s.weight*100)}%</span>
+      </div>`).join('')}
+    </div>`;
+
+  signals.forEach(s=>{
+    html+=`<div class="card" style="border-color:${s.color}22">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+        <div style="min-width:0;flex:1">
+          <div style="font-size:7px;color:${s.color};letter-spacing:2px">${s.id}</div>
+          <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#c0cce0;margin-top:2px">${s.label}</div>
+          <div style="font-size:9px;color:#4a6080;margin-top:2px">${s.desc}</div>
+        </div>
+        <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:${s.color};flex-shrink:0;margin-left:10px">${Math.round(s.weight*100)}%</div>
+      </div>
+      <div class="pbar"><div class="pbar-fill" style="width:${s.weight*200}%;background:${s.color}"></div></div>
+    </div>`;
+  });
+  document.getElementById('tab-signals').innerHTML = html;
+}
+
+function updateSigWeight(id, val, inp) {
+  const s=signals.find(s=>s.id===id);
+  if(s) s.weight=parseFloat(val);
+  const el=document.getElementById('sw_'+id);
+  if(el) el.textContent=Math.round(val*100)+'%';
+  saveData();
+  renderSignals();
+  renderPredict();
+}
+
+// ══════════════════════════════════════════
+// RENDER MODEL
+// ══════════════════════════════════════════
+function renderModel() {
+  const s=getSorted(), tw=totalW(), mean=s.reduce((a,t)=>a+t.score,0)/s.length;
+  const examYears=examDB.map(e=>e.year).sort().join(', ');
+  
+  let html=`<div class="slabel">LIVE STATS</div>
+    <div class="g2" style="margin-bottom:12px">
+      <div class="stat-box"><div class="stat-val" style="color:var(--cyan)">${topics.length}</div><div class="stat-lbl">TOPICS</div></div>
+      <div class="stat-box"><div class="stat-val" style="color:var(--purple)">${signals.length}</div><div class="stat-lbl">SIGNALS</div></div>
+      <div class="stat-box"><div class="stat-val" style="color:${Math.abs(tw-1)<0.02?'#a8ff3e':'#ff6b35'}">${tw.toFixed(2)}</div><div class="stat-lbl">TOTAL WEIGHT</div></div>
+      <div class="stat-box"><div class="stat-val" style="color:var(--orange)">${examDB.length}</div><div class="stat-lbl">EXAM YEARS</div></div>
+      <div class="stat-box"><div class="stat-val" style="color:var(--green)">${s[0]?s[0].score+'%':'—'}</div><div class="stat-lbl">TOP SCORE</div></div>
+      <div class="stat-box"><div class="stat-val" style="color:var(--cyan)">${Math.round(mean)}%</div><div class="stat-lbl">MEAN SCORE</div></div>
+    </div>
+
+    <div class="slabel">ML LAYERS</div>`;
+
+  const layers=[
+    {n:'Weighted Multi-Signal Score',c:'#00d4ff',on:true,d:'Σ(signal × weight). Core. Recomputes instantly.'},
+    {n:'Naive Bayes Normalization',c:'#9b59b6',on:true,d:'Z-score normalization. Above-mean topics boosted.'},
+    {n:'Feature Importance',c:'#ff6b35',on:true,d:'Per-signal contribution sorted by impact.'},
+    {n:'Exam-Topic Linkage',c:'#a8ff3e',on:true,d:'Historical exam data feeds S_HIST automatically.'},
+    {n:'Persistent Storage',c:'#e67e22',on:true,d:'All data saved locally on your device.'},
+    {n:'Random Forest',c:'#4a6080',on:false,d:'Coming: non-linear interaction learning.'},
+    {n:'LLM Semantic Match',c:'#4a6080',on:false,d:'Coming: embed topics vs conference abstracts.'},
+  ];
+
+  layers.forEach(l=>{
+    html+=`<div class="card" style="border-color:${l.on?l.c+'33':'#1a2540'}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:${l.on?l.c:'#2a3a55'}">${l.n}</div>
+        <div style="font-size:7px;color:${l.on?l.c:'#2a3a55'};letter-spacing:2px">${l.on?'● ON':'○ SOON'}</div>
+      </div>
+      <div style="font-size:10px;color:${l.on?'#6080a0':'#2a3a55'};line-height:1.6">${l.d}</div>
+    </div>`;
+  });
+
+  html+=`<button class="btn btn-r" style="margin-top:16px" onclick="resetData()">⚠ RESET ALL DATA</button>`;
+  document.getElementById('tab-model').innerHTML = html;
+}
+
+// ══════════════════════════════════════════
+// MODALS
+// ══════════════════════════════════════════
+function closeModal() {
+  document.getElementById('modal-root').innerHTML='';
+}
+
+function openFab() {
+  if(currentTab==='topics') openAddTopic();
+  else if(currentTab==='exams') openAddExam();
+  else if(currentTab==='signals') openAddSignal();
+}
+
+function openAddTopic() {
+  let sigHtml='';
+  signals.forEach(s=>{
+    sigHtml+=`<div class="srow">
+      <span class="slbl" style="color:${s.color}">${s.label.slice(0,12)}</span>
+      <input type="range" min="0" max="1" step="0.05" value="0" style="accent-color:${s.color}" id="nt_${s.id}"
+        oninput="document.getElementById('ntv_${s.id}').textContent=Math.round(this.value*100)+'%'">
+      <span class="sval" style="color:${s.color}" id="ntv_${s.id}">0%</span>
+    </div>`;
+  });
+
+  const examOpts=examDB.sort((a,b)=>a.year-b.year).map(e=>`<option value="${e.id}">${e.year} — ${e.label}</option>`).join('');
+
+  document.getElementById('modal-root').innerHTML=`
+  <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <div class="modal-title">+ Add Topic</div>
+      <input id="nt_label" class="ifield" placeholder="Topic label (e.g. PET-CT Nuclear Medicine)">
+      <div class="g2">
+        <select id="nt_partie" class="ifield" style="margin-bottom:8px">
+          ${[1,2,3].map(p=>`<option value="${p}">P${p} — ${PL[p]}</option>`).join('')}
+        </select>
+        <input id="nt_year" class="ifield" type="number" value="2025" placeholder="Year">
+      </div>
+      <input id="nt_prof" class="ifield" placeholder="Prof / Source">
+      <select id="nt_exam" class="ifield">
+        <option value="">— No exam linked —</option>
+        ${examOpts}
+      </select>
+      <div class="slabel">SIGNAL VALUES</div>
+      ${sigHtml}
+      <div class="g2" style="margin-top:10px;gap:8px">
+        <button class="btn btn-g" onclick="submitAddTopic()">✓ ADD TOPIC</button>
+        <button class="btn btn-x" onclick="closeModal()">CANCEL</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function submitAddTopic() {
+  const label=document.getElementById('nt_label').value.trim();
+  if(!label){toast('Enter a topic label');return;}
+  const sigs={};
+  signals.forEach(s=>{
+    const el=document.getElementById('nt_'+s.id);
+    sigs[s.id]=el?parseFloat(el.value):0;
+  });
+  const partie=parseInt(document.getElementById('nt_partie').value);
+  topics.push({
+    id:'t_'+Date.now(), label, partie,
+    prof:document.getElementById('nt_prof').value||'Unknown',
+    year:parseInt(document.getElementById('nt_year').value)||2025,
+    exam:document.getElementById('nt_exam').value||'',
+    color:PC[partie], signals:sigs,
+  });
+  saveData(); closeModal(); renderTopics(); renderPredict();
+  toast('Topic added ✓');
+}
+
+function openAddExam() {
+  const topicChecks=topics.map(t=>`
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #0a1420;cursor:pointer">
+      <input type="checkbox" id="nec_${t.id}" style="accent-color:${t.color};width:16px;height:16px">
+      <span style="flex:1;font-size:11px;color:#8090b0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${t.label}</span>
+      <span style="font-size:8px;color:${PC[t.partie]}">P${t.partie}</span>
+    </label>`).join('');
+
+  document.getElementById('modal-root').innerHTML=`
+  <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <div class="modal-title">+ Add Exam Year</div>
+      <input id="ne_year" class="ifield" type="number" placeholder="Year (e.g. 2021)" min="2000" max="2035">
+      <input id="ne_label" class="ifield" placeholder="Label (e.g. Concours Doctorat 2020-2021)">
+      <input id="ne_conf" class="ifield" placeholder="Conference linked">
+      <input id="ne_resp" class="ifield" placeholder="Responsible (e.g. Pr. Kharfi)">
+      <textarea id="ne_notes" class="ifield" placeholder="Notes on exam content..."></textarea>
+      <div class="slabel">COLOR</div>
+      <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+        ${COLORS.map((c,i)=>`<div class="cdot ${selectedColor===c?'sel':''}" id="ec_${i}" style="background:${c}" onclick="pickColor('${c}','ec_${i}')"></div>`).join('')}
+      </div>
+      <div class="slabel">LINK TOPICS TO THIS EXAM</div>
+      <div style="max-height:200px;overflow-y:auto;background:#050a14;border-radius:8px;padding:0 10px;margin-bottom:12px">
+        ${topicChecks}
+      </div>
+      <div class="g2" style="gap:8px">
+        <button class="btn btn-c" onclick="submitAddExam()">✓ ADD EXAM</button>
+        <button class="btn btn-x" onclick="closeModal()">CANCEL</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function submitAddExam() {
+  const year=parseInt(document.getElementById('ne_year').value);
+  if(!year){toast('Enter a year');return;}
+  const id='e'+year+'_'+Date.now();
+  const linked=topics.filter(t=>document.getElementById('nec_'+t.id)?.checked).map(t=>t.id);
+  linked.forEach(tid=>{const t=topics.find(x=>x.id===tid);if(t)t.exam=id;});
+  examDB.push({
+    id, year,
+    label:document.getElementById('ne_label').value||'Concours Doctorat '+year,
+    conference:document.getElementById('ne_conf').value||'—',
+    responsible:document.getElementById('ne_resp').value||'—',
+    notes:document.getElementById('ne_notes').value||'',
+    color:selectedColor,
+  });
+  saveData(); closeModal(); renderExams(); renderTopics(); renderPredict();
+  toast('Exam '+year+' added ✓');
+}
+
+function openAddSignal() {
+  document.getElementById('modal-root').innerHTML=`
+  <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <div class="modal-title">+ Add Signal</div>
+      <input id="ns_label" class="ifield" placeholder="Signal name">
+      <input id="ns_desc"  class="ifield" placeholder="Description">
+      <div class="srow" style="margin-bottom:14px">
+        <span style="font-size:9px;color:var(--c3);width:60px;flex-shrink:0">Weight</span>
+        <input type="range" id="ns_w" min="0.01" max="0.5" step="0.01" value="0.1" style="accent-color:var(--cyan)"
+          oninput="document.getElementById('ns_wv').textContent=Math.round(this.value*100)+'%'">
+        <span class="sval" style="color:var(--cyan)" id="ns_wv">10%</span>
+      </div>
+      <div class="slabel">COLOR</div>
+      <div style="display:flex;gap:8px;margin-bottom:16px">
+        ${COLORS.map((c,i)=>`<div class="cdot ${selectedColor===c?'sel':''}" id="sc_${i}" style="background:${c}" onclick="pickColor('${c}','sc_${i}')"></div>`).join('')}
+      </div>
+      <div class="g2" style="gap:8px">
+        <button class="btn btn-g" onclick="submitAddSignal()">✓ ADD</button>
+        <button class="btn btn-x" onclick="closeModal()">CANCEL</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function submitAddSignal() {
+  const label=document.getElementById('ns_label').value.trim();
+  if(!label){toast('Enter signal name');return;}
+  const id='S_'+label.replace(/\s+/g,'_').toUpperCase().slice(0,8)+'_'+Date.now();
+  signals.push({id,label,weight:parseFloat(document.getElementById('ns_w').value),color:selectedColor,desc:document.getElementById('ns_desc').value||''});
+  topics.forEach(t=>{t.signals[id]=0;});
+  saveData(); closeModal(); renderSignals(); toast('Signal added ✓');
+}
+
+// ══════════════════════════════════════════
+// ACTIONS
+// ══════════════════════════════════════════
+function switchTab(t, btn) {
+  currentTab=t; selectedTopic=null;
+  ['predict','exams','topics','signals','model'].forEach(tab=>{
+    document.getElementById('tab-'+tab).classList.toggle('hidden',tab!==t);
+    document.getElementById('tab-'+tab).classList.remove('fade-in');
+    void document.getElementById('tab-'+tab).offsetWidth;
+    if(tab===t) document.getElementById('tab-'+tab).classList.add('fade-in');
+  });
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+
+  const fab=document.getElementById('fab');
+  fab.classList.toggle('hidden',!['exams','topics','signals'].includes(t));
+  fab.textContent = t==='exams'?'📋 ＋': t==='signals'?'⊙ ＋':'＋';
+
+  document.getElementById('scroll-area').scrollTop=0;
+  render();
+}
+
+function setYear(y){ targetYear=y; renderPredict(); }
+function setPartie(p){ filterPartie=p; renderPredict(); }
+function toggleTopic(id){ selectedTopic=selectedTopic===id?null:id; renderPredict(); }
+function toggleExam(id){ expandedExam=expandedExam===id?null:id; renderExams(); }
+function setExamFilter(id){ examFilter=id; renderTopics(); }
+
+function removeTopic(id){
+  topics=topics.filter(t=>t.id!==id);
+  if(selectedTopic===id)selectedTopic=null;
+  saveData(); render(); toast('Removed ✓');
+}
+function removeExam(id){
+  examDB=examDB.filter(e=>e.id!==id);
+  topics.forEach(t=>{if(t.exam===id)t.exam='';});
+  expandedExam=null;
+  saveData(); render(); toast('Exam removed');
+}
+
+function pickColor(c, elId) {
+  selectedColor=c;
+  document.querySelectorAll('.cdot').forEach(d=>d.classList.remove('sel'));
+  const el=document.getElementById(elId);
+  if(el)el.classList.add('sel');
+}
+
+function resetData(){
+  if(confirm('Reset ALL data to defaults?')){
+    localStorage.removeItem(STORAGE_KEY);
+    loadData(); render(); toast('Data reset ✓');
+  }
+}
+
+// ══════════════════════════════════════════
+// TOAST
+// ══════════════════════════════════════════
+function toast(msg) {
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),2500);
+}
+
+// ══════════════════════════════════════════
+// FULL RENDER
+// ══════════════════════════════════════════
+function render() {
+  renderPredict(); renderExams(); renderTopics(); renderSignals(); renderModel();
+  document.getElementById('hstats').textContent=`${topics.length}T·${signals.length}S·${examDB.length}E`;
+}
+
+// ══════════════════════════════════════════
+// SPLASH & INIT
+// ══════════════════════════════════════════
+window.addEventListener('load', ()=>{
+  render();
+  setTimeout(()=>{
+    document.getElementById('splash').classList.add('fade');
+    setTimeout(()=>document.getElementById('splash').remove(),500);
+  },1800);
+});
+</script>
+</body>
+</html>
